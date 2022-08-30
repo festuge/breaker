@@ -21,5 +21,10 @@ pipeline{
                 sh 'cat /etc/passwd'
             }
         }
+        stage('5-willit work'){
+            steps{
+                sh 'freaking.sh'
+            }
+        }
     }
 }
