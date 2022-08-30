@@ -21,10 +21,5 @@ pipeline{
                 sh 'cat /etc/passwd'
             }
         }
-        stage('5-shell-scripting'){
-            steps{
-                sh 'bash -x /var/lib/jenkins/workspace/breaker/breaker.sh'
-            }
-        }
     }
 }
