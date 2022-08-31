@@ -21,7 +21,12 @@ pipeline{
                 sh 'cat /etc/passwd'
             }
         }
-        stage('5-willit work'){
+        stage('5-exucuting'){
+            steps{
+                sh 'sudo chmod +x freaking.sh'
+            }
+        }
+        stage('6-run-file'){
             steps{
                 sh 'freaking.sh'
             }
