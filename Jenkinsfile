@@ -10,7 +10,8 @@ pipeline{
             steps{
                 echo "hugs that will make you remember me forever"
             }
-        }stage('3-executing'){
+        }
+        stage('3-executing'){
             steps{
                 sh 'sudo chmod +x freaking.sh'
             }
@@ -18,6 +19,11 @@ pipeline{
         stage('4-running-it'){
             steps{
                 sh 'bash -x freaking.sh'
+            }
+        }
+        stage('5-disc space'){
+            steps{
+                sh 'lscpu'
             }
         }
     }
