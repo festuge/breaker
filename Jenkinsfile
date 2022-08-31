@@ -8,27 +8,16 @@ pipeline{
         }
         stage('2-hugs-for-menwo'){
             steps{
-                echo "hugs that will amke you remember me for ever"
+                echo "hugs that will make you remember me forever"
             }
-        }
-        stage('3-disc-space-check'){
-            steps{
-                sh 'lscpu'
-            }
-        }
-        stage('4-cat_etc-passwd'){
-            steps{
-                sh 'cat /etc/passwd'
-            }
-        }
-        stage('5-exucuting'){
+        }stage('3-executing'){
             steps{
                 sh 'sudo chmod +x freaking.sh'
             }
         }
-        stage('6-run-file'){
+        stage('4-running-it'){
             steps{
-                sh 'freaking.sh'
+                sh 'bash -x freaking.sh'
             }
         }
     }
